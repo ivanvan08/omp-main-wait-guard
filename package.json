@@ -1,0 +1,21 @@
+{
+  "name": "omp-main-wait-guard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "omp extension: the main interactive session never blocks in `wait`; background agents wake it when they finish",
+  "scripts": {
+    "typecheck": "tsc --noEmit -p .",
+    "test": "bun test"
+  },
+  "omp": {
+    "extensions": [
+      "./extensions/main-wait-guard.ts"
+    ]
+  },
+  "devDependencies": {
+    "@oh-my-pi/pi-coding-agent": "18.12.3",
+    "@types/bun": "1.4.3",
+    "typescript": "7.0.2"
+  }
+}

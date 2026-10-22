@@ -1,0 +1,16 @@
+{
+  // Type-check only. omp loads the .ts files directly through Bun, so keep this inert:
+  // no `baseUrl`/`paths`, which Bun would also honour at runtime.
+  "compilerOptions": {
+    "lib": ["ESNext"],
+    "target": "ESNext",
+    "module": "Preserve",
+    "moduleDetection": "force",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "types": ["bun"]
+  },
+  "include": ["extensions/**/*.ts", "test/**/*.ts"]
+}
